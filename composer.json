@@ -1,0 +1,60 @@
+{
+    "name": "kingflamez/laravelrave",
+    "type": "library",
+    "description": "Laravel 5 Package for working with Flutterwave Rave",
+    "keywords": [
+        "kingflamez",
+        "laravelrave"
+    ],
+    "homepage": "https://github.com/kingflamez/laravelrave",
+    "license": "MIT License",
+    "authors": [
+        {
+            "name": "Oluwole Adebiyi (Flamez)",
+            "email": "flamekeed@gmail.com",
+            "homepage": "http://flamez.com.ng",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "illuminate/support": "~5.1",
+        "php" : "~5.6|~7.0",   
+        "monolog/monolog": "1.*",
+        "mashape/unirest-php": "^3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit" : ">=5.4.3",
+        "squizlabs/php_codesniffer": "^2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "KingFlamez\\LaravelRave\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "KingFlamez\\LaravelRave\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "check-style": "phpcs -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests",
+        "fix-style": "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        },
+        "laravel": {
+            "providers": [
+                "KingFlamez\\LaravelRave\\RaveServiceProvider"
+            ],
+            "aliases": {
+                "Rave": "KingFlamez\\LaravelRave\\Facades\\Rave"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
