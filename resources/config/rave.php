@@ -24,9 +24,21 @@ return [
     'secretKey' => getenv('RAVE_SECRET_KEY'),
 
     /**
+     * Company/Business/Store Name: The name of your store
+     *
+     */
+    'title' => env('RAVE_TITLE', 'Rave Payment Gateway'),
+
+    /**
      * Environment: This can either be 'staging' or 'live'
      *
      */
     'env' => env('RAVE_ENVIRONMENT', 'staging'),
+
+    /**
+     * Logo: Enter the URL of your company/business logo
+     *
+     */
+    'logo' => env('RAVE_LOGO', ''),
 
 ];
